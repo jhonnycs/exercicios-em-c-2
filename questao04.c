@@ -11,14 +11,14 @@ int main() {
 
     if (A == B) {
         C = A + B;
-        // op = "+";
+        op = '+';
     } else {
         C = A * B;
-        // op = "*";
+        op = 'x';
     }   
 
-    // printf("\nO valor de %d %c %d = %d ", A, op, B, C);
-    printf("\nO final é %d", C);
+    printf("\nO valor de %d %c %d é %d ", A, op, B, C);
+    // printf("\nO valor final é %d", C);
 
     return 0;
 }
