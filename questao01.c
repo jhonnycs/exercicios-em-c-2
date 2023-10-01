@@ -5,7 +5,8 @@ int main() {
     int anoNasc, numeroSorte;
     float valorCompra;
 
-    time_t segundos = time(NULL); // função time retorna os segundos
+    time_t segundos = time(NULL); 
+    // função time retorna os segundos
     // atuais contados desde 1900, quando passamos null
     struct tm *data = localtime(&segundos);
     // a função localtime nesse caso joga em data o tempo atual (que está em segundos)
