@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    float salario, financiamentoPret;
+    float salario, financiamentoPre;
 
     printf("Digite o seu salário:\n> ");
     scanf("%f", &salario);
@@ -12,14 +12,14 @@ int main() {
     }
     
     printf("Digite o financiamento pretendido:\n> ");
-    scanf("%f", &financiamentoPret);
+    scanf("%f", &financiamentoPre);
 
-    while (financiamentoPret <= 0) {
+    while (financiamentoPre <= 0) {
         printf("Digite um financiamento válido:\n> ");
-        scanf("%f", &financiamentoPret);
+        scanf("%f", &financiamentoPre);
     }
 
-    if (financiamentoPret <= 5*salario) {
+    if (financiamentoPre <= 5*salario) {
         printf("\nFinanciamento concedido\n");
     } else {
         float salarioConjuge;
@@ -32,7 +32,7 @@ int main() {
             scanf("%f", salarioConjuge);
         }
 
-        if (financiamentoPret <= 5*(salario + salarioConjuge)) {
+        if (financiamentoPre <= 5*(salario + salarioConjuge)) {
             printf("\nFinanciamento concedido\n");
         } else {
             printf("\nFinanciamento negado\n");

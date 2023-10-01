@@ -1,33 +1,24 @@
 #include <stdio.h>
-#define TIPO_A 'A'
-#define TIPO_B 'B'
-#define TIPO_C 'C'
-#define TIPO_D 'D'
-
-#define VALOR_TIPO_A 150
-#define VALOR_TIPO_B 100
-#define VALOR_TIPO_C 75
-#define VALOR_TIPO_D 175
 
 int main() {
     char tipo;
-    int diarias;
+    int QuantDiarias;
     float consumoInterno;
 
     printf("Digite o tipo de apartamento (A, B, C ou D):\n> ");
     scanf(" %c", &tipo);
 
-    while (tipo != TIPO_A && tipo != TIPO_B && tipo != TIPO_C && tipo != TIPO_D) {
+    while (tipo != 'A' && tipo != 'B' && tipo != 'C' && tipo != 'D') {
         printf("Digite um tipo de apartamento válido:\n> ");
         scanf(" %c", &tipo);
     }
     
     printf("Digite o número de diárias do hóspede:\n> ");
-    scanf("%d", &diarias);
+    scanf("%d", &QuantDiarias);
 
-    while (diarias <= 0) {
+    while (QuantDiarias <= 0) {
         printf("Digite um número válido de diárias:\n> ");
-        scanf("%d", &diarias);
+        scanf("%d", &QuantDiarias);
     }
     
     printf("Digite o valor do consumo interno do hóspede:\n> ");
@@ -41,21 +32,21 @@ int main() {
     float valorUnitarioDiaria;
     float valorDiarias;
     switch (tipo) {
-    case TIPO_A:
-        valorUnitarioDiaria = VALOR_TIPO_A;
-        valorDiarias = VALOR_TIPO_A * diarias;
+    case 'A':
+        valorUnitarioDiaria = 150;
+        valorDiarias = valorUnitarioDiaria * QuantDiarias;
         break;
-    case TIPO_B:
-        valorUnitarioDiaria = VALOR_TIPO_B;
-        valorDiarias = VALOR_TIPO_B * diarias;
+    case 'B':
+        valorUnitarioDiaria = 100;
+        valorDiarias = valorUnitarioDiaria * QuantDiarias;
         break;
-    case TIPO_C:
-        valorUnitarioDiaria = VALOR_TIPO_C;
-        valorDiarias = VALOR_TIPO_C * diarias;
+    case 'C':
+        valorUnitarioDiaria = 75;
+        valorDiarias = valorUnitarioDiaria * QuantDiarias;
         break;
-    case TIPO_D:
-        valorUnitarioDiaria = VALOR_TIPO_D;
-        valorDiarias = VALOR_TIPO_D * diarias;
+    case 'D':
+        valorUnitarioDiaria = 175;
+        valorDiarias = valorUnitarioDiaria * QuantDiarias;
         break;
     }
 
@@ -64,7 +55,7 @@ int main() {
     float total = subTotal + taxaServico;
 
     printf("\nTipo de apartamento: %c", tipo);
-    printf("\nNúmero de diárias: %d", diarias);
+    printf("\nNúmero de diárias: %d", QuantDiarias);
     printf("\nValor unitário da diária: R$ %.2f", valorUnitarioDiaria);
     printf("\nValor total das diárias: R$ %.2f", valorDiarias);
     printf("\nValor do consumo interno: R$ %.2f", consumoInterno);

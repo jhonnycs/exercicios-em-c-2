@@ -11,10 +11,16 @@ int main() {
         scanf("%f", &media);
     }
 
-    if (media >= 6) {
-        printf("\nAprovado");
+    if (media >= 9) {
+        printf("\nAprovado, conceito A");
+    } else if (media >= 7.5) {
+        printf("\nAprovado, conceito B");
+    } else if (media >= 6) {
+        printf("\nAprovado, conceito C");
+    } else if (media >= 4) {
+        printf("\nReprovado, conceito D");
     } else {
-        printf("\nReprovado");
+        printf("\nReprovado, conceito E");
     }
     
     return 0;

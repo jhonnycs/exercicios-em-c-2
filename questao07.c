@@ -1,7 +1,4 @@
 #include <stdio.h>
-#define AUM_TEC 1.5
-#define AUM_GER 1.3
-#define AUM_DEM 1.2
 
 int main() {
     float salario;
@@ -21,16 +18,13 @@ int main() {
     
     switch (funcao) {
     case 1:
-        salario = salario * AUM_TEC;
+        salario = salario * 1.5;
         break;
     case 2:
-        salario = salario * AUM_GER;
-        break;
-    case 3:
-        salario = salario * AUM_DEM;
+        salario = salario * 1.3;
         break;
     default:
-        salario = salario * AUM_DEM;
+        salario = salario * 1.2;
         break;
     }
 

@@ -30,8 +30,6 @@ int main() {
         scanf("%f", &valorCompra);
     }
 
-    
-
     int idade = anoAtual - anoNasc;
     if (valorCompra < 500) {
         numeroSorte = 5000 - valorCompra * idade;
